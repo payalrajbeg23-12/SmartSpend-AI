@@ -1,0 +1,13 @@
+description,amount,type,category,date
+Salary,50000,income,Other,2026-07-01
+Rent,12000,expense,Bills,2026-07-03
+Groceries,5000,expense,Food,2026-07-05
+Bus,1500,expense,Transport,2026-07-07
+Salary,50000,income,Other,2026-08-01
+Rent,12000,expense,Bills,2026-08-03
+Groceries,5500,expense,Food,2026-08-05
+Shopping,4000,expense,Shopping,2026-08-10
+Salary,52000,income,Other,2026-09-01
+Rent,12000,expense,Bills,2026-09-03
+Groceries,6000,expense,Food,2026-09-05
+Entertainment,2500,expense,Entertainment,2026-09-12

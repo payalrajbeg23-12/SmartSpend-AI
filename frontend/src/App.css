@@ -1,0 +1,120 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #1f2328;
+  min-height: 100vh;
+}
+
+/* ── Topbar ─────────────────────────────────────────── */
+.topbar {
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+/* ── Layout ─────────────────────────────────────────── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ── KPI cards ──────────────────────────────────────── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  border-left: 5px solid #ccc;
+}
+.card h3 { font-size: .85rem; text-transform: uppercase; color: #57606a; margin-bottom: .5rem; }
+.card p  { font-size: 1.5rem; font-weight: 700; }
+.card.income  { border-color: #4CAF50; }
+.card.income  p { color: #2e7d32; }
+.card.expense { border-color: #f44336; }
+.card.expense p { color: #c62828; }
+.card.balance { border-color: #2196F3; }
+.card.balance p { color: #1565c0; }
+
+/* ── Two-column row ─────────────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+
+/* ── Panel ──────────────────────────────────────────── */
+.panel {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  margin-bottom: 1.5rem;
+}
+.panel h2 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; color: #2c3e50; }
+
+/* ── Form ───────────────────────────────────────────── */
+.form-group { margin-bottom: .85rem; }
+.form-group label { display: block; font-size: .82rem; color: #57606a; margin-bottom: .3rem; font-weight: 600; }
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: .45rem .6rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: .9rem;
+  background: #fff;
+}
+.form-group input:focus,
+.form-group select:focus { outline: none; border-color: #3b82d4; box-shadow: 0 0 0 2px rgba(59,130,212,.2); }
+
+.btn-submit {
+  width: 100%;
+  padding: .6rem;
+  background: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: .95rem;
+  cursor: pointer;
+  margin-top: .5rem;
+  font-weight: 600;
+}
+.btn-submit:hover { background: #3d5166; }
+
+.form-error { color: #c62828; font-size: .85rem; margin-bottom: .75rem; }
+
+/* ── Table ──────────────────────────────────────────── */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+thead tr { background: #f7f8fa; }
+th, td { padding: .65rem .75rem; text-align: left; border-bottom: 1px solid #e5e7eb; }
+th { font-size: .78rem; text-transform: uppercase; color: #57606a; font-weight: 700; }
+tbody tr:hover { background: #f7f8fa; }
+
+.badge { display: inline-block; padding: .2rem .55rem; border-radius: 12px; font-size: .75rem; font-weight: 600; text-transform: capitalize; }
+.badge.income  { background: #e8f5e9; color: #2e7d32; }
+.badge.expense { background: #ffebee; color: #c62828; }
+
+.btn-delete { background: none; border: none; color: #c62828; font-size: 1rem; cursor: pointer; padding: .2rem .5rem; border-radius: 4px; }
+.btn-delete:hover { background: #ffebee; }
+
+.empty-msg { color: #57606a; font-size: .9rem; }
+
+/* ── Loading / error ────────────────────────────────── */
+.center-msg { text-align: center; margin-top: 4rem; color: #57606a; font-size: 1.1rem; }
